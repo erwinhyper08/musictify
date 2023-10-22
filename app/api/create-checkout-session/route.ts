@@ -23,8 +23,9 @@ export async function POST(
       email: user?.email || ''
     });
 
-    const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
+    const session = await stripe.checkout.sessions.create({ 
+        //@ts-ignore
+        payment_method_types: ["Card"],
         billing_address_collection: 'required',
         customer,
         line_items: [{price: price.id, quantity}],
