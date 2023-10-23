@@ -22,7 +22,7 @@ const Liked = async () => {
       "
     >
       <Header>
-        <div className="mt-20">
+        <div className="mt-1">
           <div 
             className="
               flex 

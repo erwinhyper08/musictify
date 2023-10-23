@@ -8,10 +8,11 @@ import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import { toast } from "react-hot-toast";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
-
+import Image from "next/image";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 import usePlayer from "@/hooks/usePlayer";
+import logo from "@/images/logo.png"
 
 import Button from "./Button";
 
@@ -84,6 +85,10 @@ const Header: React.FC<HeaderProps> = ({
             <RxCaretRight className="text-white" size={35} />
           </button>
         </div>
+        
+        <Image 
+          src={logo} width="150" height="150" alt="Image"/>
+        
         <div className="flex md:hidden gap-x-2 items-center">
           <button 
             onClick={() => router.push('/')} 
