@@ -8,7 +8,6 @@ import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
 import SupabaseProvider from '@/providers/SupabaseProvider'
 import Player from '@/components/Player'
-
 import './globals.css'
 
 const font = Figtree({ subsets: ['latin'] })

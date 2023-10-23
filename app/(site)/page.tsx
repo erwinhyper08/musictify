@@ -2,6 +2,7 @@ import getSongs from "@/actions/getSongs";
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
 import PageContent from "./component/PageContent";
+import FacebookMsg from "@/components/FacebookMsg";
 
 
 
@@ -59,6 +60,7 @@ export default async function Home() {
         </div>
         <PageContent songs={songs} />
       </div>
+      <FacebookMsg />
     </div>
   )
 }
