@@ -9,7 +9,7 @@ create table users (
   avatar_url text,
   -- The customer's billing address, stored in JSON format.
   billing_address jsonb,
-  -- Stores your customer's payment instruments.
+  -- Stores your customer's payment method.
   payment_method jsonb
 );
 alter table users
@@ -76,7 +76,7 @@ create policy "Allow public read-only access." on products
 
 /**
 * PRICES
-* Note: prices are created and managed in Stripe and synced to our DB via Stripe webhooks.
+* Note: prices are created and managed in Stripe and synced to supabase DB via Stripe webhooks.
 */
 create type pricing_type as enum ('one_time', 'recurring');
 create type pricing_plan_interval as enum ('day', 'week', 'month', 'year');
